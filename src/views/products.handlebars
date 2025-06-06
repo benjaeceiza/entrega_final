@@ -9,23 +9,26 @@
 <body>
     <h1 style="text-align: center; padding:20px;">Aqui se mostraran la paginacion de los productos</h1>
     {{#each products}}
-    <div >
-    <h2 style="text-align: center;">{{this.title}}</h2>
+    <div style="display: flex; justify-content:space-between;align-items:center; width:500px;margin:auto;">
+        <h2 style="text-align: center;">{{this.title}} - ${{this.price}}</h2>
+        <div style="width: 150px; background-color:rgb(0, 177, 80); text-align:center;border-radius:20px;">
+            <p style="color: white; cursor:pointer;">Agregar a carrito</p>
+        </div>
     </div>
     {{/each}}
-   <p style="text-align: center;">Pagina {{page}} de {{totalPages}}</p> 
+    <p style="text-align: center;">Pagina {{page}} de {{totalPages}}</p>
 
     <div style="text-align: center;">
         {{#if hasPrevPage}}
-        <a style="padding-right:10px;" href="/products?page={{prevPage}}">Anterior</a>
+        <a style="padding-right:10px;" href="/products?page={{prevPage}}&&limit={{limit}}">Anterior</a>
         {{/if}}
 
         {{#if hasNextPage}}
-        <a style="padding-left:10px;" href="/products?page={{nextPage}}">Siguiente</a>
+        <a style="padding-left:10px;" href="/products?page={{nextPage}}&&limit={{limit}}">Siguiente</a>
         {{/if}}
     </div>
- 
+
 </body>
 <script src="../js/main.js"></script>
- 
+
 </html>

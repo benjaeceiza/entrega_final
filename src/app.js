@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 import dontenv from "dotenv"
 import { engine } from "express-handlebars";
 import path from "path";
-import productsRouter from "./routes/views.router.js";
+import productsRouter from "./routes/products.router.js";
+import cartsRouter from "./routes/carts.router.js";
 
 //Configuracion para las variables de entorno
 dontenv.config();
@@ -24,9 +25,15 @@ mongoose.connect(process.env.MONGO_URI,{dbName:"Ecommerce"})
 .catch( (err) => console.log("Error al conectarse a la base de datos",err))
 
 
+
+//Rutas de los productos
 app.use("/",productsRouter);
 
-app.use("/",productsRouter)
+//Rutas de los carritos
+app.use("/api/carts",cartsRouter)
+app.use("/api/carts/:cid",cartsRouter)
+app.use("/api/carts/:cid/products/:pid",cartsRouter)
+
 //Damos de alta al servidor
 app.listen(8080,() => {
    console.log("Servidor corriendo en el puerto 8080");

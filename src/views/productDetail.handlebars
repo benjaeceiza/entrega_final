@@ -1,14 +1,30 @@
-<h1>DEtalle de producto</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-{{#each product}}
-<div>
-    <div>
-        <h2>{{this.title}}</h2>
-        
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding:20px;">Detalle de producto</h1>
+
+    <div style="border: solid 3px black; border-radius:20px; width:500px; margin:auto; text-align:center;">
+        <div >
+            <h2>{{product.title}}</h2>
+            <img src={{product.thumbnails}} alt={{product.title}}>
+        </div>
+        <div >
+            <p>{{product.description}}</p>
+            <p>Categoria: {{product.category}}</p>
+            <p style="font-size: 20px; font-weight:bold;">Precio: ${{product.price}}</p>
+        </div>
     </div>
-    <div>
-
+    <div style="width: 150px; background-color:rgb(0, 177, 80); text-align:center; margin:auto;border-radius:20px;">
+        <p style="color: white; padding: 10px 0px 10px 0px; cursor:pointer;">Agregar a carrito</p>
     </div>
-</div>
 
-{{/each}}
+
+</body>
+
+</html>
