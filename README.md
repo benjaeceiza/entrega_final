@@ -18,7 +18,7 @@ Este repositorio reúne todos los conocimientos, prácticas y proyectos desarrol
 ```bash
 # Clonar el repositorio
 git clone https://github.com/benjaeceiza/entrega_final.git
-cd proyecto-final-backend
+cd entrega_final
 
 # Instalar dependencias
 npm install
