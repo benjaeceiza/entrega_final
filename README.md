@@ -29,7 +29,7 @@ touch .env
 # MONGO_URI=mongodb+srv://benjaeceiza400:3101@cluster0.hiztpge.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 # Levantar el servidor
-npm run dev
+npm start
 ```
 
 Abrir en navegador: `http://localhost:8080/products`
