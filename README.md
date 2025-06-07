@@ -17,7 +17,7 @@ Este repositorio reúne todos los conocimientos, prácticas y proyectos desarrol
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/proyecto-final-backend.git
+git clone https://github.com/benjaeceiza/entrega_final.git
 cd proyecto-final-backend
 
 # Instalar dependencias
